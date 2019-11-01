@@ -41,14 +41,14 @@ endif
 all: 327_proj3_test
 
 dependents:
-	-cd /tmp/guest-jrkrja/Desktop/327_proj3_fileIO/Debug && $(MAKE) all
-	-cd /tmp/guest-jrkrja/Desktop/327_proj3_stringparser/Debug && $(MAKE) all
+	-cd /tmp/guest-eylcsd/Desktop/327_proj3_fileIO/Debug && $(MAKE) clean all
+	-cd /tmp/guest-eylcsd/Desktop/327_proj3_stringparser/Debug && $(MAKE) clean all
 
 # Tool invocations
-327_proj3_test: $(OBJS) $(USER_OBJS) /tmp/guest-jrkrja/Desktop/327_proj3_fileIO/Debug/lib327_proj3_fileIO.a /tmp/guest-jrkrja/Desktop/327_proj3_stringparser/Debug/lib327_proj3_stringparser.a
+327_proj3_test: $(OBJS) $(USER_OBJS) /tmp/guest-eylcsd/Desktop/327_proj3_fileIO/Debug/lib327_proj3_fileIO.a /tmp/guest-eylcsd/Desktop/327_proj3_stringparser/Debug/lib327_proj3_stringparser.a
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/tmp/guest-jrkrja/Desktop/327_proj3_stringparser/Debug" -L"/tmp/guest-jrkrja/Desktop/327_proj3_fileIO/Debug" -L../../327_proj3_fileIO/Debug -o "327_proj3_test" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/tmp/guest-eylcsd/Desktop/327_proj3_stringparser/Debug" -L"/tmp/guest-eylcsd/Desktop/327_proj3_fileIO/Debug" -L../../327_proj3_fileIO/Debug -o "327_proj3_test" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -58,7 +58,7 @@ clean:
 	-@echo ' '
 
 .PHONY: all clean dependents
-/tmp/guest-jrkrja/Desktop/327_proj3_fileIO/Debug/lib327_proj3_fileIO.a:
-/tmp/guest-jrkrja/Desktop/327_proj3_stringparser/Debug/lib327_proj3_stringparser.a:
+/tmp/guest-eylcsd/Desktop/327_proj3_fileIO/Debug/lib327_proj3_fileIO.a:
+/tmp/guest-eylcsd/Desktop/327_proj3_stringparser/Debug/lib327_proj3_stringparser.a:
 
 -include ../makefile.targets
